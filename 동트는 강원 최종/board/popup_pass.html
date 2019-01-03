@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>동트는 강원 : 비밀번호확인</title>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />	
+	<!-- 마크업 전달 속성 -->
+	<link rel="stylesheet" href="../comn/css/style.css">
+	<script src="../comn/js/jquery-1.11.2.min.js"></script>
+	<script src="../comn/js/jquery-ui.min.js"></script>
+	<script src="../comn/js/common.js"></script><!-- 메인페이지엔 없어야함 -->
+</head>
+<body>
+
+<div class="popHead">
+	<h1>비밀번호 확인</h1>
+	<a href="#close" class="btnClose" onclick="window.close();"><span class="icon"></span>창닫기</a>
+</div>
+<div class="popBody">
+    <form name="flogin" action="./password_check_proc.php" method="post">
+	<input type="hidden" name="board_id" value="writer">
+	<input type="hidden" name="no" value="<?=$_GET[no]?>">
+	<input type="hidden" name="smode" value="<?=$_GET['mode']?>">
+	<input type="hidden" name="sch_text" value="<?=$sch_text?>">
+	<input type="hidden" name="cate" value="<?=$cate?>">
+
+	<div class="passBox">
+		<p class="info">글 등록하실때 입력하신 비밀번호를 입력해주세요.</p>
+		<ul>
+			<li>비밀번호 : <input type="password" style="width:100px;" name="password" title="비밀번호"></li>
+		</ul>
+		<div class="btnArea center">
+			<a href="#none" onclick="form_submit()" class="btnBig orange">확인</a>
+		</div>
+	</div>
+	</form>
+</div><!-- //popBody -->
+
+</body>
+</html>
+
+<script>
+function form_submit(){
+	if(!document.flogin.password.value){
+		alert("비밀번호를 입력해 주세요.");
+		return false;
+	}
+    document.flogin.submit();
+}
+</script>

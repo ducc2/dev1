@@ -1,0 +1,127 @@
+<?
+$sh["rPath"]	= "../..";
+include_once($sh["rPath"]."/_common.php");
+
+
+
+$sh["title"] = $sh["stie_title"]."";
+
+include_once($sh["rPath"]."/m/_head.php");
+
+$sql		= "SELECT distinct(ban_yy) FROM sh_old_banner order by ban_yy desc";
+$row		= $DB->dfetcharr($sql);
+
+?>
+
+	<!-- con_wrap -->
+	<div class="con_wrap clearfix">
+		<!-- container -->
+		<div class="container" id="container">
+
+		<!-- ============================ 내용시작 ============================ -->
+			<div class="contents">
+				<h2>지난호보기</h2>
+
+				<dl class="issue_list">
+				<?
+				for($i=0;$i<sizeof($row);$i++){
+				$rows					= $row[$i];
+				?>
+					<dt><?=$rows[ban_yy]?>년</dt>
+					<dd>
+						<ul>
+						<?
+						$sql_		= "SELECT * FROM sh_old_banner where ban_yy='".$rows[ban_yy]."'";
+
+						$row_		= $DB->dfetcharr($sql_);
+						for($e=0;$e<sizeof($row_);$e++){ 
+						
+						$ban_img_tmp="";
+
+						$rows2_					= $row_[$e];
+						
+						if($rows2_[ban_img]){
+							$filename_exp	= explode("|", $rows2_[ban_img]);
+							$ban_img_tmp	= "$filename_exp[1]";
+						}else{
+							$ban_img_tmp	= "";
+						}
+
+						?>
+							<li>
+							<? if ($ban_img_tmp) { ?>
+							<a href='/data/banner/<?=$filename_exp[1]?>'><?=$rows2_[ban_name]?></a>
+							<? } else { ?>
+							<a href='#'><?=$rows2_[ban_name]?></a>
+							<? } ?>
+							</li>
+						<? } ?>
+						</ul>
+					</dd>
+				<? } ?>
+					<!-- <dt>2015년</dt>
+					<dd>
+						<ul>
+							<li><a href="#">1,2월호</a></li>
+							<li><a href="#">3,4월호</a></li>
+							<li><a href="#">5,6월호</a></li>
+							<li><a href="#">7,8월호</a></li>
+							<li><a href="#">9,10월호</a></li>
+							<li><a href="#">11,12월호</a></li>
+						</ul>
+					</dd>
+					<dt>2014년</dt>
+					<dd>
+						<ul>
+							<li><a href="#">1,2월호</a></li>
+							<li><a href="#">3,4월호</a></li>
+							<li><a href="#">5,6월호</a></li>
+							<li><a href="#">7,8월호</a></li>
+							<li><a href="#">9,10월호</a></li>
+							<li><a href="#">11,12월호</a></li>
+						</ul>
+					</dd>
+					<dt>2013년</dt>
+					<dd>
+						<ul>
+							<li><a href="#">1,2월호</a></li>
+							<li><a href="#">3,4월호</a></li>
+							<li><a href="#">5,6월호</a></li>
+							<li><a href="#">7,8월호</a></li>
+							<li><a href="#">9,10월호</a></li>
+							<li><a href="#">11,12월호</a></li>
+						</ul>
+					</dd>
+					<dt>2012년</dt>
+					<dd>
+						<ul>
+							<li><a href="#">1,2월호</a></li>
+							<li><a href="#">3,4월호</a></li>
+							<li><a href="#">5,6월호</a></li>
+							<li><a href="#">7,8월호</a></li>
+							<li><a href="#">9,10월호</a></li>
+							<li><a href="#">11,12월호</a></li>
+						</ul>
+					</dd>
+					<dt>2011년</dt>
+					<dd>
+						<ul>
+							<li><a href="#">1,2월호</a></li>
+							<li><a href="#">3,4월호</a></li>
+							<li><a href="#">5,6월호</a></li>
+							<li><a href="#">7,8월호</a></li>
+							<li><a href="#">9,10월호</a></li>
+							<li><a href="#">11,12월호</a></li>
+						</ul>
+					</dd> -->
+				</dl>
+
+
+
+
+			</div><!--// contents-->
+		<!-- ============================ 내용종료 ============================ -->
+
+		</div><!--// container -->
+
+		 <? include_once($sh["rPath"]."/_bottom_sub.php"); ?>

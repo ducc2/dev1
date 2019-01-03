@@ -1,0 +1,40 @@
+[client]
+default-character-set=euckr
+
+[mysqld]
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+user=mysql
+
+#character-set-client-handshake=FALSE
+#init_connect="SET collation_connection = euckr_korean_ci"
+#init_connect="SET NAMES euckr"
+#default-character-set = euckr
+#default-set-server = euckr
+#collation-server=euckr_korean_ci
+
+#init_connect='set names utf8'
+#character-set-server=utf8
+#default-collation=utf8_unicode_ci
+#skip-character-set-client-handshake
+#character-set-filesystem=utf8
+#default-character-set=utf8
+
+
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
+
+[mysqld_safe]
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid
+
+
+[mysql]
+no-auto-rehash
+default-character-set=euckr
+
+#[client]
+#default-character-set=euckr
+
+[mysqldump]
+default-charcter-set=euckr

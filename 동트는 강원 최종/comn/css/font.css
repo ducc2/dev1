@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/comn/css/NanumGothic.eot);
+       url(/comn/css/NanumGothic.woff) format('woff');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 600;
+  src: url(/comn/css/NanumGothicBold.eot);
+       url(/comn/css/NanumGothicBold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(/comn/css/NanumGothicExtraBold.eot);
+       url(/comn/css/NanumGothicExtraBold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/comn/css/NanumMyeongjo.eot);
+       url(/comn/css/NanumMyeongjo.woff) format('woff');
+}
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 600;
+  src: url(/comn/css/NanumMyeongjoBold.eot);
+       url(/comn/css/NanumMyeongjoBold.woff) format('woff');
+}
