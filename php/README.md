@@ -1,2 +1,1 @@
-# php 개발 했던 소스 모음
-# crm 개발 소스 
+# php sources (CRM) 
