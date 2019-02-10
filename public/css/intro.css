@@ -1,0 +1,154 @@
+body{
+   
+    background-color: #fff;
+    
+}
+.bgbody{
+    max-width: 1090px;
+    height: 652px;
+    background-image: url("../image/bbg.jpg");
+    background-repeat: no-repeat;
+   /* margin: 0 auto;
+    position: relative;
+   background-position: center;*/
+    position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+   box-shadow: -1px 0px 19px -2px #b8b2b8;
+}
+
+.bgbody > .top {
+    
+   padding-top: 22px;
+    
+    
+}
+
+.bgbody > .top > ul > li {
+    list-style: none;
+    /*font-family: url("../font/NotoSansCJKkr-Regular.otf");*/
+    font-size: 13.31px;
+    font-family: NotoSansCJKkr-Regular;
+    float: left;
+    display: block;
+}
+
+
+
+.bgbody > .top > ul > li > a > #logo {
+    margin-left: 37px;
+}
+
+.bgbody > .top > ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.bgbody > .top > ul > li >  #tt1 {
+    margin-top: 20px;
+    margin-left: 278px;
+}
+
+.bgbody > .top > ul > li >  #tt2 {
+   
+    margin-left: 288px;
+}
+
+.bgbody > .top > ul > #tt1m {
+     margin-top: 8px;
+}
+
+
+/*.top end*/
+
+
+
+/*.middle start*/
+
+.bgbody > .middle {
+    padding-top: 170px;
+}
+
+
+.bgbody > .middle > ul > li {
+    list-style: none;
+    float: left;
+    display: block;
+    margin-right: 33px;
+}
+
+
+.bgbody > .middle > ul{
+    margin: 0px;
+    padding: 0px;
+    margin-left: 37px;
+}
+
+
+
+/*.bgbody > .middle > ul > li > a >#mb1 {
+    
+}*/
+
+
+
+/*
+.bgbody > .middle > ul > li > a#mb1:hover{
+    background-image: url(../image/bg01.jpg)
+}
+*/
+
+
+
+
+
+/*bottom text*/
+
+
+.bgbody > .bottomtx{
+    list-style: none;
+    width: 260px;
+    height: 28px;
+    /*font-family: url("../font/NotoSansCJKkr-Regular.otf");*/
+    font-size: 11px;
+    font-family: NotoSansCJKkr-Demilight;
+    font-weight: 700;
+    margin:0 auto;
+    margin-top: 470px;
+ 
+}
+
+
+
+
+@font-face {
+    font-family: 'NotoSansCJKkr-Regular';
+    src: url("./font/NotoSansCJKkr-Regular.otf");
+    
+}
+
+@font-face {
+    font-family: 'NotoSansCJKkr-Black';
+    src: url("./font/NotoSansCJkkr-Black.otf");
+    
+}
+
+@font-face {
+    font-family: 'NotoSansCJKkr-DemiLight';
+    src: url("./font/NotoSansCJKkr-DemiLight.otf");
+    
+}
+
+
+
+
+
+
+
+
+
+
+
