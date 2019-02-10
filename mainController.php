@@ -27,7 +27,7 @@ ini_set('max_input_time',-1); //300->1000
 ini_set('post_max_size','1100M');
 ini_set('upload_max_filesize','1000M');
 
-class PetController extends Controller
+class mainController extends Controller
 {
     private $db;
     private $sec;

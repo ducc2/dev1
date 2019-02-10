@@ -38,12 +38,12 @@ class RpcController extends Controller
      */
     public function __construct($host = 'localhost', $url = null)
     {
-        $this->host = "52.79.113.112";
-        $this->username      = "rpcadminOhwe"; //RPC-name
+        $this->host = "";
+        $this->username      = ""; //RPC-name
         //$this->password      = "12345"; //RPC-password
-        $this->password = "J5Gu3K4abz1HdYBCV7Mt";
+        $this->password = "";
         //$this->host          = $host; //RPC-host
-        $this->port          = 5450; //RPC-port
+        $this->port          = ; //RPC-port
         $this->url           = $url; //RPC-url
         // Set some defaults
         $this->proto         = 'http';
